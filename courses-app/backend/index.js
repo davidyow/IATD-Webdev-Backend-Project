@@ -68,6 +68,21 @@ app.get('/courses/:courseId', (req, res) => {
             res.status(500).send('Error retrieving course');
         });
 });
+
+// 1. Add a new Course
+app.post('/courses', async (req, res) => {
+    const newCourse = new Course({
+        ...req.body,
+    });
+    try {
+        await newCourse.save();
+        console.log('Course created:', newCourse);
+        res.status(201).send(newCourse);
+    } catch (error) {
+        res.status(400).send(error);
+    }
+});
+
 // Array to store items
 //let items = [];
 
