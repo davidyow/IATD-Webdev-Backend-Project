@@ -56,8 +56,10 @@ app.get('/courses', (req, res) => {
 
 // Retrieve a single course by course_id
 app.get('/courses/:courseId', (req, res) => {
+
+//    const courseid = mongoose.Types.Objectid(req.params.courseId)
     Course.findById(req.params.courseId)
-        .then(student => {
+       .then(course => {
             if (!course) {
                 return res.status(404).send('Course not found');
             }
