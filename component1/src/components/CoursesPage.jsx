@@ -1,8 +1,14 @@
+import { useState } from 'react'
 import './css/CoursesPage.css'
 import { useLocation, useNavigate } from 'react-router-dom';
 
 
 function CoursesPage() {
+  const navigate = useNavigate();
+
+  const handleButtonClick = (identifier) => {
+    navigate(`/detail?button=${identifier}`);
+  };
 
   return (
     <div className="container">
