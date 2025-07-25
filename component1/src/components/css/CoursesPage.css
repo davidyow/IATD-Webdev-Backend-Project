@@ -26,9 +26,9 @@
 }
 
 .dashboard-container {
-  display: grid;
-  place-items: center;
-  height: 80vh;
+  display: flex;
+  flex-direction: column;
+ 
 }
 
 .dashboard-flex-container {
@@ -165,4 +165,50 @@ fieldset {
   place-items: center;
 }
 
+.card-img {
+    max-width:85%;
+    border: 1px solid #ddd;
+ 
+    padding: 1em;
+    margin:0%;
+}
 
+
+/* Styles for media queries */
+@media (min-width:800px) {
+    .card-rtbtn {
+    float: right;
+    }
+
+}
+@media (min-width:600px) {
+  header {
+    text-align: center;
+    }
+
+    .cards-container {
+    flex-direction: row;
+    display: flex;
+    flex-wrap:wrap;
+    gap: 1rem;
+    margin:1em;
+    }
+
+    .card {
+        max-width: 500px;
+        width: 30%;
+        background: white;
+        padding: 1rem;
+        border: 1px solid #ddd;
+
+    }
+
+    .course-container {
+        display: flex;
+        width: auto;
+    }
+
+    .course-img {
+    max-width:30%;
+    }
+}
