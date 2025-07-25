@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './css/CoursesPageTest.css'
+import './css/styles.css'
 import image1 from './images/lightsaber-collection-T-IN5o3kxyA-unsplash.jpg'
 import image2 from './images/nasa-Q1p7bh3SHj8-unsplash.jpg'
 import image3 from './images/kirill-sh-ohBcGYJ8brQ-unsplash.jpg'
@@ -11,7 +11,18 @@ function CoursesPage() {
   const navigate = useNavigate();
 
   const handleButtonClick = (identifier) => {
-    navigate(`/detail?button=${identifier}`);
+    if (identifier == 'IOCENCT') { 
+    navigate(`/course1?button=${identifier}`);
+    }
+    if (identifier == 'ENARSI') { 
+    navigate(`/course2?button=${identifier}`);
+    }
+    if (identifier == 'ENAUI') { 
+    navigate(`/course3?button=${identifier}`);
+    }
+    if (identifier == 'ENSDWI') { 
+    navigate(`/course4?button=${identifier}`);
+    }
   };
 
   return (
