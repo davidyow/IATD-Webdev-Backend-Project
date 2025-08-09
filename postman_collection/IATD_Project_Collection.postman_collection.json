@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "a9f0f1c5-7d28-49a7-9c77-d0a71cd8bf2a",
+		"name": "IATD_Project_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24048098"
+	},
+	"item": [
+		{
+			"name": "Get courses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5999/courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5999",
+					"path": [
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get course by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5999/courses/6881c60667e89221654ed10e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5999",
+					"path": [
+						"courses",
+						"6881c60667e89221654ed10e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new course",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"title\": \"New course 2\",\n\"description\": \"Testing adding another course\",\n\"instructor\": \"John Doe\",\n\"duration\": 50,\n\"category\": \"Testing\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5999/courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5999",
+					"path": [
+						"courses"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
